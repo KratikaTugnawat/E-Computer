@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Form</title>
+    <link rel="stylesheet" href="Contact.css">
+  
+</head>
+<body>
+    <div class="container">
+        <form id="shopping-cart-form" action="PlaceOrder.html" method="get">
+            <h2>Shopping Cart Form</h2>
+            <div>
+                <label for="name">Shipping Street</label>
+            </div>
+            <div class="form-group">
+                
+               
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label style="margin-right: 60px;" for="name">Shipping City</label>                       </label>
+                <label style="margin-left: 60px;" for="name">Shipping Country</label>
+            </div>
+            <div class="form-group">
+                <!-- <label for="cars">Shipping City</label> -->
+                <select style="margin-right: 60px;" id="name" required>
+                    <option value="volvo" disabled selected></option>
+                  <option value="volvo">Pune</option>
+                  <option value="saab">Mumbai</option>
+                  <option value="opel">Punjab</option>
+                  <option value="audi">orissa</option>
+                </select>
+               
+                <!-- <label for="cars">Shipping Country</label> -->
+<select  style="margin-left: 90px;" id="name" required>
+    <option value="volvo" disabled selected></option>
+  <option value="volvo">India</option>
+  <option value="saab">New york</option>
+  <option value="opel">Australia</option>
+  <option value="audi">US </option> 
+</select>
+            </div>
+            <div>
+                <label style="margin-right: 60px;" for="name">Shipping Zip/Postal Code </label>                      </label>
+                <label style="margin-left: 10px;" for="name">Shipping State</label>
+            </div>
+           
+            <div class="form-group">
+                
+                <input type="text" style="margin-right: 40px;" id="name">
+               
+                <input type="text" style="margin-left: 20px;" id="name">
+            </div>
+           
+            <div>
+            <label for="name">Address Type</label>
+        </div>
+            <div class="form-group">
+                <input type="radio" 
+                id="name" 
+                name="name" 
+                value="Netflix">
+         <label for="Netflix">Home Address</label>
+         <input type="radio" 
+               id="name" 
+               name="name" 
+               value="Netflix">
+        <label for="name">Bussiness Address</label>
+            </div>
+            <div class="form-group">
+                <label for="name" >Comment</label>
+                <textarea id="name" name="address" required></textarea>
+            </div>
+            <!-- <button type="submit">Place Order</button> -->
+            <!-- <a href="index.html">
+                <button type="submit">Place Order</button>
+            </a> -->
+            <!-- <div>
+                <a href="index.html">
+                    <button type="submit">Add to Cart</button>
+                </a>
+            </div> -->
+            <!-- <a href="PlaceOrder.html">
+                <button type="submit">Place</button>
+                <input type="submit">
+            </a> -->
+            <!-- <button onclick="document.location.href='PlaceOrder.html'">Submit</button> -->
+            <!-- <button type="button" 
+            id="submitButton">
+          Submit
+      </button> -->
+      <input type="submit" value="Submit">
+        </form>
+      
+    </div>
+    <script>
+        // document.addEventListener(
+        //       'DOMContentLoaded', () => {
+        //     document.getElementById('submitButton').
+        //         addEventListener('click', function () {
+        //             alert('Form submitted!');
+        //         });
+        // });
+        document.getElementById("shopping-cart-form").addEventListener("submit", function(event) {
+  var nameField = document.getElementById("name");
+  if (nameField.value === "") {
+    event.preventDefault();
+    alert("Please fill in the name field!");
+  }
+});
+    </script>
+</body>
+</html>
